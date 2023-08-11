@@ -1,0 +1,19 @@
+{
+  "name": "random-avatars",
+  "version": "1.0.0",
+  "description": "random-avatars",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "step1": "node scripts/flatten.js",
+    "step2": "node scripts/flatten-to-array.js",
+    "step3": "node scripts/shuffle-and-split.js",
+    "p": "prettier --write .",
+    "all": "pnpm step1 && pnpm step2 && pnpm step3",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pipecraft",
+  "dependencies": {
+    "prettier": "^3.0.1"
+  }
+}
