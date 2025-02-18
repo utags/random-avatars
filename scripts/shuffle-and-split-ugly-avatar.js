@@ -21,12 +21,15 @@ function shuffle(array) {
 }
 
 function main() {
-  const text = fs.readFileSync("data/new-content-array.json", "utf8")
+  const text = fs.readFileSync(
+    "data/ugly-avatar-generated-filelist.txt",
+    "utf8"
+  )
   try {
-    const array = JSON.parse(text)
+    const array = text.split("\n").filter(v => { return !!v})
     const newArray = shuffle(shuffle(array))
     const length = newArray.length
-    const SIZE_PER_FILE = Math.floor(length / 100)
+    const SIZE_PER_FILE = Math.floor(length / 10)
     let start = 0
     let index = 1
 
@@ -38,7 +41,7 @@ function main() {
       start += SIZE_PER_FILE
 
       fs.writeFileSync(
-        `public/gfriends/gfriends-${index}.json`,
+        `public/ugly-avatar/ugly-avatar-${index}.json`,
         JSON.stringify(trunk, null, 2) + "\n",
         "utf8"
       )
