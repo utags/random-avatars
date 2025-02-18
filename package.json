@@ -8,6 +8,7 @@
     "step1": "node scripts/flatten.js",
     "step2": "node scripts/flatten-to-array.js",
     "step3": "node scripts/shuffle-and-split.js",
+    "step11": "node scripts/shuffle-and-split-ugly-avatar.js",
     "p": "prettier --write .",
     "all": "pnpm step1 && pnpm step2 && pnpm step3",
     "test": "echo \"Error: no test specified\" && exit 1"
