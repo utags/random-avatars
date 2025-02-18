@@ -38,7 +38,7 @@ function main() {
       start += SIZE_PER_FILE
 
       fs.writeFileSync(
-        `public/gfriends-${index}.json`,
+        `public/gfriends/gfriends-${index}.json`,
         JSON.stringify(trunk, null, 2) + "\n",
         "utf8"
       )
